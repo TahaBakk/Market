@@ -29,13 +29,13 @@ public class Client extends Thread {
         try {
             cua.ocuparcua(tria_cua);
             sleep(rd.nextInt(150));
-            cua.pagar(rd.nextInt(250));
+            cua.pagar(rd.nextInt(250), temps);
             cua.desocuparcua(tria_cua);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        System.out.println("Soc el client: "+this.numero+" i he trigat a comprar "+temps+" He pagat en la caixa "+tria_cua);
+        System.out.println("Soc el client: "+this.numero+" i he trigat a comprar "+temps+" He pagat en la caixa "+tria_cua +" amb un import de "+ cua.getTotalPagar()+" euros");
 
 
     }

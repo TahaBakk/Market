@@ -6,8 +6,7 @@ public class Cua {
 
     private int nuncaixes;
     private boolean [] caixes;
-    //private double total;
-    //private double temps;
+    private double totalPagar=0;
 
 
     public Cua(int caixes) {
@@ -38,14 +37,13 @@ public class Cua {
     }
 
     //Aixo es per treure cuant a pagat
-    //El documento per que veigis
-    /*public double pagar(int pagar) {
-        this.temps = Math.floor(Math.random()*100+1);
-        total = pagar*temps;
-        return total;
-    }*/
+    public void pagar(int pagar, int temps ) {
+         this.totalPagar = (pagar*temps)/100;
+    }
 
-
+    public double getTotalPagar(){
+        return totalPagar;
+    }
 
 }
 
